@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2020_09_30_222454) do
   enable_extension "plpgsql"
 
   create_table "license_keys", force: :cascade do |t|
-    t.string "key"
+    t.string "key", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["key"], name: "index_license_keys_on_key"
+    t.index ["key"], name: "index_license_keys_on_key", unique: true
   end
 
 end
