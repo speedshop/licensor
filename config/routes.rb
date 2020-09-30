@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resource :license, only: [:create, :show]
+  resources :contents, only: [:index, :show]
 end

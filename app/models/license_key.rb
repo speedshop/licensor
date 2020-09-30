@@ -1,0 +1,3 @@
+class LicenseKey < ApplicationRecord 
+
+end
