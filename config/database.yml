@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: licensor_production
-  username: licensor
-  password: <%= ENV['LICENSOR_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %> 
