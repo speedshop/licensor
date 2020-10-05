@@ -1,3 +1,2 @@
-class LicenseKey < ApplicationRecord 
-
+class LicenseKey < ApplicationRecord
 end
