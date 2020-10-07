@@ -83,8 +83,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.10.1)
-      activesupport (>= 5.0.0)
     jmespath (1.4.0)
     loofah (2.7.0)
       crass (~> 1.0.2)
@@ -182,9 +180,8 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3
   bootsnap (>= 1.4.2)
-  jbuilder (~> 2.7)
   pg (>= 0.18, < 2.0)
-  puma (~> 4.1)
+  puma
   rails (~> 6.0.3, >= 6.0.3.2)
   standard
 

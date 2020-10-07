@@ -4,13 +4,13 @@ class ContentsController < ApplicationController
   def show
     @content = Content.find(params[:id])
     signer = Aws::S3::Presigner.new
-    url, headers = signer.presigned_request(
-      :get_object, 
-      bucket: ENV["AWS_BUCKET_NAME"], 
-      key: @content.s3_key, 
+    url, _ = signer.presigned_request(
+      :get_object,
+      bucket: ENV["AWS_BUCKET_NAME"],
+      key: @content.s3_key,
       use_accelerate_endpoint: true
     )
-    render json: { url: url }
+    render json: {url: url}
   end
 
   def index

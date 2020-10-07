@@ -11,7 +11,7 @@ class LicensesController < ApplicationController
     head :ok
   end
 
-  def destroy 
+  def destroy
     LicenseKey.find_by(key: params[:key]).destroy!
     head :ok
   end
