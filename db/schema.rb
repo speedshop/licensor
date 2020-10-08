@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_07_155026) do
+ActiveRecord::Schema.define(version: 2020_10_08_142246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_10_07_155026) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "s3_key"
+    t.string "filename"
+    t.string "type"
   end
 
   create_table "license_keys", force: :cascade do |t|

@@ -3,14 +3,12 @@ class ContentsController < ApplicationController
 
   def show
     @content = Content.find(params[:id])
-    signer = Aws::S3::Presigner.new
-    url, _ = signer.presigned_request(
-      :get_object,
-      bucket: ENV["AWS_BUCKET_NAME"],
-      key: @content.s3_key,
-      use_accelerate_endpoint: true
-    )
-    render json: {url: url}
+    render json: @content.as_json(include: :url)
+  end
+
+  def position
+    @content = Content.where("position >= ?", params[:position]).order(:position).first 
+    render json: @content.as_json(include: :url)
   end
 
   def index
