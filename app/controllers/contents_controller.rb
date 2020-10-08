@@ -3,12 +3,12 @@ class ContentsController < ApplicationController
 
   def show
     @content = Content.find(params[:id])
-    render json: @content.as_json(include: :url)
+    render json: @content.as_json(methods: :url)
   end
 
   def position
     @content = Content.where("position >= ?", params[:position]).order(:position).first 
-    render json: @content.as_json(include: :url)
+    render json: @content.as_json(methods: :url)
   end
 
   def index

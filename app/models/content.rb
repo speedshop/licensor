@@ -8,5 +8,6 @@ class Content < ApplicationRecord
       key: s3_key,
       use_accelerate_endpoint: true
     )
+    url
   end
 end

@@ -1,3 +1,5 @@
+LicenseKey.create!(key: "this-is-a-key")
+
 # First, CGRP
 Content.create!(
   position: 0,
