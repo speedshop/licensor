@@ -13,6 +13,6 @@ class ContentsController < ApplicationController
 
   def index
     @contents = Content.order(:position)
-    render json: @contents
+    render json: @contents.as_json(methods: :url)
   end
 end
