@@ -7,7 +7,7 @@ class ContentsController < ApplicationController
   end
 
   def position
-    @content = Content.where("position >= ?", params[:position]).order(:position).first 
+    @content = Content.where("position >= ?", params[:position]).order(:position).first
     render json: @content.as_json(methods: :url)
   end
 

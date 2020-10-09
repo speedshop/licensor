@@ -1,5 +1,5 @@
 class Content < ApplicationRecord
-  def url 
+  def url
     return nil unless s3_key
     signer = Aws::S3::Presigner.new
     url, _ = signer.presigned_request(

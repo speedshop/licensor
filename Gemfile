@@ -13,4 +13,4 @@ group :development do
   gem "standard"
 end
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem "dotenv-rails", groups: [:development, :test]
