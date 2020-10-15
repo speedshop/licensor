@@ -6,4 +6,9 @@ class ContactMailer < ActionMailer::Base
       format.text { render plain: params[:data].inspect }
     end
   end
+
+  def workshop_sold_email 
+    @keys = LicenseKey.find(license_key_ids)
+    mail(to: customer["email"], subject: "Welcome to the Rails Performance Workshop")
+  end
 end
