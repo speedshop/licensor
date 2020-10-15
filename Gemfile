@@ -10,6 +10,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "aws-sdk-s3"
 gem "stripe"
 gem "mailgun-ruby"
+gem "sentry-raven"
 
 group :development do
   gem "standard"
