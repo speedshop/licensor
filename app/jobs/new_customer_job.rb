@@ -14,9 +14,5 @@ class NewCustomerJob < ActiveJob::Base
       customer: session.customer.to_h,
       license_key_ids: license_keys.map(&:id)
     ).workshop_sold_email.deliver_later
-      
-    # Send webhooks:
-      # Adding to mailing list 
-      # Adding to Slack 
   end
 end
