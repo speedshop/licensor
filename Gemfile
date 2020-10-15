@@ -8,6 +8,8 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "aws-sdk-s3"
+gem "stripe"
+gem "mailgun-ruby"
 
 group :development do
   gem "standard"
