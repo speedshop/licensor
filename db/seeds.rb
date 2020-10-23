@@ -24,14 +24,6 @@ Content.create!(
       style: "video",
       indent: 1
     )
-
-    Content.create!(
-      position: (section * 100 + 100) + (video * 10 + 15),
-      title: "Quiz: #{section}:#{video}",
-      s3_key: "quiz_#{section}_#{video}.yaml",
-      style: "quiz",
-      indent: 2
-    )
   end
 
   Content.create!(
@@ -41,4 +33,16 @@ Content.create!(
     style: "lab",
     indent: 1
   )
+end
+
+{0 => [2, 3, 4], 1 => [0,1,2], 2 => [0]}.each do |section, videos|
+  videos.each do |video| 
+    Content.create!(
+      position: (section * 100 + 100) + (video * 10 + 15),
+      title: "Quiz: #{section}:#{video}",
+      s3_key: "quiz_#{section}_#{video}.yaml",
+      style: "quiz",
+      indent: 2
+    )
+  end
 end
