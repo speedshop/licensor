@@ -28,7 +28,7 @@ Content.create!(
     Content.create!(
       position: (section * 100 + 100) + (video * 10 + 15),
       title: "Quiz: #{section}:#{video}",
-      s3_key: "quiz_#{section}_#{video}.md",
+      s3_key: "quiz_#{section}_#{video}.yaml",
       style: "quiz",
       indent: 2
     )
