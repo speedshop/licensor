@@ -12,7 +12,7 @@ class LicensesController < ApplicationController
   end
 
   def update 
-    EmailKeyRegistrationJob.perform_later(key: params[:key], email: params[:email])
+    EmailKeyRegistrationJob.perform_later(params[:key], params[:email])
     head :ok
   end
 
