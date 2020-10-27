@@ -10,7 +10,7 @@ class NewCustomerJob < ActiveJob::Base
     customer = session.customer.to_h
 
     license_keys = quantity.times do
-      LicenseKey.create!(email: customer[:email], key: LicenseKey.generate_key)
+      LicenseKey.create!(email: customer[:email].downcase, key: LicenseKey.generate_key)
     end
 
     ContactMailer.with(

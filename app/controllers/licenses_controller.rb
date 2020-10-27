@@ -11,6 +11,11 @@ class LicensesController < ApplicationController
     head :ok
   end
 
+  def update 
+    EmailKeyRegistrationJob.perform_later(key: params[:key], email: params[:email])
+    head :ok
+  end
+
   def destroy
     LicenseKey.find_by(key: params[:key]).destroy!
     head :ok
