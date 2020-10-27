@@ -11,6 +11,7 @@ gem "aws-sdk-s3"
 gem "stripe"
 gem "mailgun-ruby"
 gem "sentry-raven"
+gem "typhoeus"
 
 group :development do
   gem "standard"
