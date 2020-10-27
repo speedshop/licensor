@@ -1,6 +1,6 @@
 class CheckoutsController < ApplicationController
-  ALLOWED_ORIGIN = Rails.env.development? ? "*" : "speedshop.co"
-  DOMAIN = Rails.env.development? ? "localhost:8080" : "speedshop.co"
+  ALLOWED_ORIGIN = Rails.env.development? ? "*" : "www.speedshop.co"
+  DOMAIN = Rails.env.development? ? "localhost:8080" : "www.speedshop.co"
   before_action :set_cors
 
   def create
