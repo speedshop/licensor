@@ -1,5 +1,4 @@
 class CheckoutsController < ApplicationController
-  ALLOWED_ORIGIN = Rails.env.development? ? "*" : "www.speedshop.co"
   DOMAIN = Rails.env.development? ? "localhost:8080" : "www.speedshop.co"
   before_action :set_cors
 
@@ -33,7 +32,7 @@ class CheckoutsController < ApplicationController
   def set_cors
     response.set_header(
       "Access-Control-Allow-Origin",
-      ALLOWED_ORIGIN
+      "*"
     )
   end
 end
