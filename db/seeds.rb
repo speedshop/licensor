@@ -35,8 +35,8 @@ Content.create!(
   )
 end
 
-{0 => [2, 3, 4], 1 => [0,1,2], 2 => [0]}.each do |section, videos|
-  videos.each do |video| 
+{0 => [2, 3, 4], 1 => [0, 1, 2], 2 => [0]}.each do |section, videos|
+  videos.each do |video|
     Content.create!(
       position: (section * 100 + 100) + (video * 10 + 15),
       title: "Quiz: #{section}:#{video}",

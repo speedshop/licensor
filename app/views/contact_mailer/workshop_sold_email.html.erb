@@ -1,7 +1,10 @@
 <h1>Welcome to the Rails Performance Workshop</h1>
 
+<% if @keys.size > 1 %>
 <p>Your license keys are:</p>
-
+<% else %>
+<p>Your license key is:</p>
+<% end %>
 <ul>
   <% @keys.each do |key| %>
     <li>
@@ -10,4 +13,12 @@
   <% end %>
 </ul>
 
-<p>Get tootin'!</p>
+<p>
+  To get started, open up your terminal and:
+</p>
+<code>
+  $ gem install rpw && rpw start
+</code>
+<p>
+  ... to get going.
+</p>

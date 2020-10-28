@@ -1,9 +1,17 @@
 Welcome to the Rails Performance Workshop
 
+<% if @keys.size > 1 %>
 Your license keys are:
+<% else %>
+Your license key is:
+<% end %>
 
 <% @keys.each do |key| %>
   <%= key.key %>
 <% end %>
 
-Get tootin'!
+To get started, open up your terminal and:
+
+$ gem install rpw && rpw start
+
+... to get going.

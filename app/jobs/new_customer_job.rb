@@ -1,4 +1,4 @@
-class NewCustomerJob < ActiveJob::Base 
+class NewCustomerJob < ActiveJob::Base
   ZAPIER_HOOK_URL = ENV["ZAPIER_HOOK_URL"]
 
   def perform(checkout_session_id)
@@ -9,9 +9,9 @@ class NewCustomerJob < ActiveJob::Base
     quantity = session.line_items.data.first.quantity
     customer = session.customer.to_h
 
-    license_keys = quantity.times.map do
+    license_keys = quantity.times.map {
       LicenseKey.create!(email: customer[:email].downcase, key: LicenseKey.generate_key)
-    end
+    }
 
     ContactMailer.with(
       email: customer[:email],

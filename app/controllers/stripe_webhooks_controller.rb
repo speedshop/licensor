@@ -4,8 +4,8 @@ class StripeWebhooksController < ApplicationController
   def create
     begin
       event = Stripe::Webhook.construct_event(
-        request.body.read, 
-        request.headers["Stripe-Signature"], 
+        request.body.read,
+        request.headers["Stripe-Signature"],
         ENDPOINT_SECRET
       )
     rescue JSON::ParserError
