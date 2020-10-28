@@ -21,7 +21,7 @@ class CheckoutsController < ApplicationController
       # Later on in the guide, you'll create a real success page, but no need to
       # do it yet.
       success_url: "https://#{DOMAIN}/rpw_checkout_success.html",
-      cancel_url: "https://#{DOMAIN}/rails-performance-workshop.html"
+      cancel_url: "https://#{DOMAIN}/rails-performance-workshop-beta.html"
     })
 
     render json: {id: session.id}
