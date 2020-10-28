@@ -16,7 +16,7 @@ class StripeWebhooksController < ApplicationController
 
     case event.type
     when "checkout.session.completed"
-      NewCustomerJob.perform_later(event[:id])
+      NewCustomerJob.perform_later(event.data.object.id)
     else
       puts "Unhandled event type: #{event.type}"
     end
