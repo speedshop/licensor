@@ -8,7 +8,7 @@ class ContactMailer < ActionMailer::Base
   end
 
   def workshop_sold_email 
-    @keys = LicenseKey.find(license_key_ids)
-    mail(to: customer["email"], subject: "Welcome to the Rails Performance Workshop")
+    @keys = LicenseKey.find(params[:license_key_ids])
+    mail(to: params[:email], subject: "Welcome to the Rails Performance Workshop")
   end
 end
