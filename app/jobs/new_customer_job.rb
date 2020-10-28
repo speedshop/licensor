@@ -14,7 +14,7 @@ class NewCustomerJob < ActiveJob::Base
     end
 
     ContactMailer.with(
-      customer: customer,
+      customer: customer.to_hash,
       license_key_ids: license_keys.map(&:id)
     ).workshop_sold_email.deliver_later
 
