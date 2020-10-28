@@ -9,7 +9,7 @@ class NewCustomerJob < ActiveJob::Base
     quantity = session.line_items.data.first.quantity
     customer = session.customer.to_h
 
-    license_keys = quantity.times do
+    license_keys = quantity.times.map do
       LicenseKey.create!(email: customer[:email].downcase, key: LicenseKey.generate_key)
     end
 
