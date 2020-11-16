@@ -5,7 +5,7 @@ class EmailKeyRegistrationJob < ActiveJob::Base
     Typhoeus::Request.post(
       ZAPIER_HOOK_URL,
       body: {
-        "email": customer[:email]
+        "email": email
       }.to_json
     )
   end
