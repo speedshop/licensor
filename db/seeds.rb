@@ -19,7 +19,7 @@ Content.create!(
   "ActiveRecord", "Profiling", "Scaling"].each_with_index do |section, i|
   Content.create!(
     position: i * 100 + 100,
-    title: "Section: #{section} (Intro)",
+    title: "Section: #{section}",
     s3_key: "section_intro_#{i}.md",
     style: "text"
   )
