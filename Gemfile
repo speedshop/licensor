@@ -12,6 +12,7 @@ gem "stripe"
 gem "mailgun-ruby"
 gem "sentry-raven"
 gem "typhoeus"
+gem "barnes"
 
 group :development do
   gem "standard"
