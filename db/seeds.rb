@@ -60,7 +60,7 @@ end
   Content.create!(
     position: 200 + (index * 10 + 10),
     title: "Video: #{video}",
-    s3_key: "video_1_#{index + 1}.mp4",
+    s3_key: "video_1_#{index}.mp4",
     style: "video",
     indent: 1
   )
@@ -70,7 +70,7 @@ end
   Content.create!(
     position: 200 + (index * 10 + 12),
     title: "Quiz",
-    s3_key: "quiz_1_#{index + 1}.yaml",
+    s3_key: "quiz_1_#{index}.yaml",
     style: "quiz",
     indent: 2
   )
@@ -87,7 +87,7 @@ end
   Content.create!(
     position: 300 + (index * 10 + 10),
     title: "Video: #{video}",
-    s3_key: "video_2_#{index + 1}.mp4",
+    s3_key: "video_2_#{index}.mp4",
     style: "video",
     indent: 1
   )
@@ -97,7 +97,7 @@ end
   Content.create!(
     position: 300 + (index * 10 + 12),
     title: "Quiz",
-    s3_key: "quiz_2_#{index + 1}.yaml",
+    s3_key: "quiz_2_#{index}.yaml",
     style: "quiz",
     indent: 2
   )
@@ -114,7 +114,7 @@ end
   Content.create!(
     position: 400 + (index * 10 + 10),
     title: "Video: #{video}",
-    s3_key: "video_3_#{index + 1}.mp4",
+    s3_key: "video_3_#{index}.mp4",
     style: "video",
     indent: 1
   )
@@ -124,7 +124,7 @@ end
   Content.create!(
     position: 400 + (index * 10 + 12),
     title: "Quiz",
-    s3_key: "quiz_3_#{index + 1}.yaml",
+    s3_key: "quiz_3_#{index}.yaml",
     style: "quiz",
     indent: 2
   )
@@ -134,7 +134,6 @@ end
   "How Profiling Works",
   "Using Stackprof",
   "Profiling Background Jobs",
-  "Profiling Test Suites",
   "Profiling Boot",
   "Profiling Memory",
   "Profiling Test Suites",
@@ -143,7 +142,7 @@ end
   Content.create!(
     position: 500 + (index * 10 + 10),
     title: "Video: #{video}",
-    s3_key: "video_4_#{index + 1}.mp4",
+    s3_key: "video_4_#{index}.mp4",
     style: "video",
     indent: 1
   )
@@ -153,7 +152,7 @@ end
   Content.create!(
     position: 500 + (index * 10 + 12),
     title: "Quiz",
-    s3_key: "quiz_4_#{index + 1}.yaml",
+    s3_key: "quiz_4_#{index}.yaml",
     style: "quiz",
     indent: 2
   )
@@ -169,7 +168,7 @@ end
   Content.create!(
     position: 600 + (index * 10 + 10),
     title: "Video: #{video}",
-    s3_key: "video_5_#{index + 1}.mp4",
+    s3_key: "video_5_#{index}.mp4",
     style: "video",
     indent: 1
   )
@@ -177,7 +176,7 @@ end
   Content.create!(
     position: 600 + (index * 10 + 12),
     title: "Quiz",
-    s3_key: "quiz_5_#{index + 1}.yaml",
+    s3_key: "quiz_5_#{index}.yaml",
     style: "quiz",
     indent: 2
   )
@@ -195,7 +194,7 @@ end
     index = d[0]
     title = d[1]
     Content.create!(
-      position: section * 100 + 100 + (index * 10 + 4),
+      position: section * 100 + 100 + (index * 10 + 14),
       title: title,
       s3_key: "lab_#{section}_#{index}.tar.gz",
       style: "lab",
@@ -205,7 +204,7 @@ end
 end
 
 {
-  0 => [[3, "PR: Prod Perf Monitoring"]],
+  0 => [[2, "PR: Prod Perf Monitoring"]],
   1 => [[2,"PR: Frontend Mistakes"]],
   2 => [[1,"PR: Local Perf Environment"]],
   3 => [[2,"PR: N+1s"],[3,"PR: Unnecessary SQL"],[4,"PR: QueryCache"]],
@@ -215,9 +214,9 @@ end
     index = d[0]
     title = d[1]
     Content.create!(
-      position: section * 100 + 100 + (index * 10 + 6),
+      position: section * 100 + 100 + (index * 10 + 16),
       title: title,
-      s3_key: "safari_#{section}_#{index}.tar.gz",
+      s3_key: "safari_#{section}_#{index}.md",
       style: "text",
       indent: 2
     )
