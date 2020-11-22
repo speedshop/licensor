@@ -20,7 +20,7 @@ Content.create!(
   Content.create!(
     position: i * 100 + 100,
     title: "Section: #{section}",
-    s3_key: "section_intro_#{i}.md",
+    s3_key: "intro_#{i}.md",
     style: "text"
   )
 end
