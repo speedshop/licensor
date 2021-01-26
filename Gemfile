@@ -16,6 +16,9 @@ gem "barnes"
 
 group :development do
   gem "standard"
+  gem "rack-mini-profiler"
+  gem "stackprof"
+  gem "memory_profiler"
 end
 
 gem "dotenv-rails", groups: [:development, :test]

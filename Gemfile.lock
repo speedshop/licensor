@@ -109,6 +109,7 @@ GEM
       rest-client (~> 2.0.2)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    memory_profiler (1.0.0)
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
@@ -131,6 +132,8 @@ GEM
     puma (5.0.2)
       nio4r (~> 2.0)
     rack (2.2.3)
+    rack-mini-profiler (2.3.0)
+      rack (>= 1.2.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.3.3)
@@ -191,6 +194,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stackprof (0.2.16)
     standard (0.7)
       rubocop (= 0.92)
       rubocop-performance (= 1.8.1)
@@ -220,10 +224,13 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   dotenv-rails
   mailgun-ruby
+  memory_profiler
   pg (>= 0.18, < 2.0)
   puma
+  rack-mini-profiler
   rails (~> 6.0.3, >= 6.0.3.2)
   sentry-raven
+  stackprof
   standard
   stripe
   typhoeus
