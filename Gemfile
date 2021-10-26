@@ -1,7 +1,6 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.2"
+ruby "3.0.2"
 
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "pg", ">= 0.18", "< 2.0"
@@ -12,7 +11,6 @@ gem "stripe"
 gem "mailgun-ruby"
 gem "sentry-raven"
 gem "typhoeus"
-gem "barnes"
 
 group :development do
   gem "standard"
