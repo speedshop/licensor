@@ -15,7 +15,7 @@ Content.create!(
 )
 
 # Section Intros
-["Performance Measurement", "Full-Stack Performance", "Ruby Benchmarking", 
+["Performance Measurement", "Full-Stack Performance", "Ruby Benchmarking",
   "ActiveRecord", "Profiling", "Scaling"].each_with_index do |section, i|
   Content.create!(
     position: i * 100 + 100,
@@ -39,7 +39,7 @@ end
     indent: 1
   )
 
-  next if [0].include? index 
+  next if [0].include? index
 
   Content.create!(
     position: 100 + ((index + 1) * 10 + 12),
@@ -65,7 +65,7 @@ end
     indent: 1
   )
 
-  next if [3,4].include? index 
+  next if [3,4].include? index
 
   Content.create!(
     position: 200 + (index * 10 + 12),
@@ -92,7 +92,7 @@ end
     indent: 1
   )
 
-  next if [1,5].include? index 
+  next if [1,5].include? index
 
   Content.create!(
     position: 300 + (index * 10 + 12),
@@ -119,7 +119,7 @@ end
     indent: 1
   )
 
-  next if [1].include? index 
+  next if [1].include? index
 
   Content.create!(
     position: 400 + (index * 10 + 12),
@@ -147,7 +147,7 @@ end
     indent: 1
   )
 
-  next if [6].include? index 
+  next if [6].include? index
 
   Content.create!(
     position: 500 + (index * 10 + 12),
@@ -189,7 +189,7 @@ end
   3 => [[0,"Handout: Activerecord Troubleshooting"],[2,"Lab: Fixing N+1s"],[3,"Lab: Unnecessary SQL"]],
   4 => [[6,"Handout: Perf PR/Transaction Checklists"]],
   5 => [[4, "Lab: Scaling in Miniature"]]
-}.each do |section, data| 
+}.each do |section, data|
   data.each do |d|
     index = d[0]
     title = d[1]
@@ -209,7 +209,7 @@ end
   2 => [[1,"PR: Local Perf Environment"]],
   3 => [[2,"PR: N+1s"],[3,"PR: Unnecessary SQL"],[4,"PR: QueryCache"]],
   4 => [[4,"PR: Memory Allocation"],[5,"PR: Tests"],[6,"PR: Capstone Project"],],
-}.each do |section, data| 
+}.each do |section, data|
   data.each do |d|
     index = d[0]
     title = d[1]
@@ -222,3 +222,19 @@ end
     )
   end
 end
+
+Content.create!(
+  position: 0,
+  title: "Welcome to Sidekiq in Practice",
+  s3_key: "intro.md",
+  style: "text",
+  product: 1
+)
+
+Content.create!(
+  position: 5,
+  title: "Text Formats (PDF, EPUB, TXT)",
+  s3_key: "sip.tar.gz",
+  style: "sip"
+  product: 1
+)

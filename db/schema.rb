@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_27_154806) do
+ActiveRecord::Schema.define(version: 2021_10_26_192819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_154806) do
     t.string "s3_key"
     t.string "style"
     t.integer "indent", default: 0
+    t.integer "product", default: 0
   end
 
   create_table "license_keys", force: :cascade do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_154806) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
     t.boolean "email_changed", default: false
+    t.integer "product", default: 0
     t.index ["key"], name: "index_license_keys_on_key", unique: true
   end
 

@@ -17,4 +17,20 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
     body = JSON.parse(response.body)
     assert body.first["url"].start_with?("https://speedshop-rpw.s3-accelerate.amazonaws.com")
   end
+
+  test "sip w/key" do
+    get contents_url, headers: { Authorization: ActionController::HttpAuthentication::Basic.encode_credentials(license_keys(:valid_sip).key, '') }
+
+    body = JSON.parse(response.body)
+    assert_equal "Welcome to Sidekiq in Practice", body.first["title"]
+    assert body.first["url"].start_with?("https://speedshop-rpw.s3-accelerate.amazonaws.com")
+  end
+
+  test "sip w/no key" do
+    get contents_url, params: { product: "sip"}
+
+    body = JSON.parse(response.body)
+    assert_equal "Welcome to Sidekiq in Practice", body.first["title"]
+    refute body.first["url"]
+  end
 end

@@ -686,3 +686,11 @@ content_86:
   s3_key: safari_4_6.md
   style: text
   indent: 2
+
+content_87:
+  id: 87
+  title: 'Welcome to Sidekiq in Practice'
+  position: 0
+  product: 1
+  s3_key: intro.md
+  style: text

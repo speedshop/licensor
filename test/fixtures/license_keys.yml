@@ -8,3 +8,7 @@ email_changed:
   key: email_changed
   email_changed: true
   email: emailchanged@test.com
+
+valid_sip:
+  key: sipvalid
+  product: 1
