@@ -23,7 +23,7 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
 
     body = JSON.parse(response.body)
     assert_equal "Welcome to Sidekiq in Practice", body.first["title"]
-    assert body.first["url"].start_with?("https://speedshop-rpw.s3-accelerate.amazonaws.com")
+    assert body.first["url"].start_with?("https://speedshop-sip.s3-accelerate.amazonaws.com")
   end
 
   test "sip w/no key" do

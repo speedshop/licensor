@@ -225,7 +225,7 @@ end
 
 Content.create!(
   position: 0,
-  title: "Welcome to Sidekiq in Practice",
+  title: "Introduction",
   s3_key: "intro.md",
   style: "text",
   product: 1
@@ -233,8 +233,60 @@ Content.create!(
 
 Content.create!(
   position: 5,
-  title: "Text Formats (PDF, EPUB, TXT)",
+  title: "Sidekiq in Practice",
   s3_key: "sip.tar.gz",
-  style: "sip"
+  style: "sip",
   product: 1
 )
+
+# Section Intros
+["How Sidekiq Works, and Why", "Understanding Queueing Systems", "Setting Concurrency",
+  "Why Is My Queue So Long?", "How Many Queues Should I Have?", "Maximizing Servers",
+  "My Jobs are Running Twice!", "Database Pools", "Is My App Thread-Safe?", "Using Less Memory"].each_with_index do |section, i|
+  Content.create!(
+    position: i * 100 + 100,
+    title: section,
+    s3_key: "chapter_#{i}.md",
+    style: "text",
+    product: 1
+  )
+end
+
+[
+  "Reducing Redis Load",
+  "Multi-Server Setups",
+  "Amdahl's Law",
+  "Jobs Are Cheaper",
+  "Load Shedding",
+  "Scaling Redis... with SQL",
+  "Managing SQL Load",
+  "Multi-threading inside a Job",
+  "Memory Profiling"
+].each_with_index do |video, index|
+  i = index + 1
+  Content.create!(
+    position: i * 100 + 100 + 10,
+    title: "Video: #{video}",
+    s3_key: "video_#{i}.mp4",
+    style: "video",
+    indent: 1,
+    product: 1
+  )
+
+  Content.create!(
+    position: i * 100 + 100 + 12,
+    title: "Quiz",
+    s3_key: "quiz_#{i}.yaml",
+    style: "quiz",
+    product: 1
+  )
+
+  Content.create!(
+    position: i * 100 + 100 + 20,
+    title: "Hands-on Lab",
+    s3_key: "lab_#{i}.tar.gz",
+    style: "lab",
+    indent: 1,
+    product: 1
+  )
+end
