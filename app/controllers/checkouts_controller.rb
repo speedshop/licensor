@@ -2,11 +2,11 @@ class CheckoutsController < ApplicationController
   DOMAIN = Rails.env.development? ? "localhost:8080" : "www.speedshop.co"
   before_action :set_cors
 
-  def create 
-    quantity = if params[:quantity].empty? || params[:quantity] == "0"
-       1
-    else 
+  def create
+    quantity = if !params[:quantity]&.empty? && params[:quantity] != "0"
       params[:quantity]
+    else
+      0
     end
 
     session = Stripe::Checkout::Session.create({

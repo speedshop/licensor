@@ -12,19 +12,16 @@ class LicensesController < ApplicationController
   end
 
   def update
-    license_key = LicenseKey.find_by(key: params[:key])
-    success = license_key.with_lock do
-      return false if license_key.email == params[:email].downcase || license_key.email_changed
+    license_key = LicenseKey.lock.find_by!(key: params[:key])
+    if license_key.email == params[:email].downcase || license_key.email_changed
+      head :forbidden
+    else
       license_key.email_changed = true
       license_key.email = params[:email].downcase
       license_key.save
-    end
 
-    if success
       EmailKeyRegistrationJob.perform_later(params[:key], params[:email])
       head :ok
-    else
-      head :forbidden
     end
   end
 

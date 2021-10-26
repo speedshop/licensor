@@ -1,0 +1,688 @@
+
+content_1:
+  id: 1
+  title: Welcome to the Workshop
+  position: 0
+  s3_key: video_0_0.mp4
+  style: video
+  indent: 0
+
+content_2:
+  id: 2
+  title: The Complete Guide to Rails Performance
+  position: 5
+  s3_key: cgrp.tar.gz
+  style: cgrp
+  indent: 0
+
+content_3:
+  id: 3
+  title: 'Section: Performance Measurement'
+  position: 100
+  s3_key: intro_0.md
+  style: text
+  indent: 0
+
+content_4:
+  id: 4
+  title: 'Section: Full-Stack Performance'
+  position: 200
+  s3_key: intro_1.md
+  style: text
+  indent: 0
+
+content_5:
+  id: 5
+  title: 'Section: Ruby Benchmarking'
+  position: 300
+  s3_key: intro_2.md
+  style: text
+  indent: 0
+
+content_6:
+  id: 6
+  title: 'Section: ActiveRecord'
+  position: 400
+  s3_key: intro_3.md
+  style: text
+  indent: 0
+
+content_7:
+  id: 7
+  title: 'Section: Profiling'
+  position: 500
+  s3_key: intro_4.md
+  style: text
+  indent: 0
+
+content_8:
+  id: 8
+  title: 'Section: Scaling'
+  position: 600
+  s3_key: intro_5.md
+  style: text
+  indent: 0
+
+content_9:
+  id: 9
+  title: 'Video: Understanding Requirements'
+  position: 120
+  s3_key: video_0_1.mp4
+  style: video
+  indent: 1
+
+content_10:
+  id: 10
+  title: 'Video: Production Profilers'
+  position: 130
+  s3_key: video_0_2.mp4
+  style: video
+  indent: 1
+
+content_11:
+  id: 11
+  title: Quiz
+  position: 132
+  s3_key: quiz_0_2.yaml
+  style: quiz
+  indent: 2
+
+content_12:
+  id: 12
+  title: 'Video: Assessing Rails Apps'
+  position: 140
+  s3_key: video_0_3.mp4
+  style: video
+  indent: 1
+
+content_13:
+  id: 13
+  title: Quiz
+  position: 142
+  s3_key: quiz_0_3.yaml
+  style: quiz
+  indent: 2
+
+content_14:
+  id: 14
+  title: 'Video: Live Assessment Example'
+  position: 150
+  s3_key: video_0_4.mp4
+  style: video
+  indent: 1
+
+content_15:
+  id: 15
+  title: Quiz
+  position: 152
+  s3_key: quiz_0_4.yaml
+  style: quiz
+  indent: 2
+
+content_16:
+  id: 16
+  title: 'Video: How Front-End Perf Works'
+  position: 210
+  s3_key: video_1_0.mp4
+  style: video
+  indent: 1
+
+content_17:
+  id: 17
+  title: Quiz
+  position: 212
+  s3_key: quiz_1_0.yaml
+  style: quiz
+  indent: 2
+
+content_18:
+  id: 18
+  title: 'Video: Optimizing LCP'
+  position: 220
+  s3_key: video_1_1.mp4
+  style: video
+  indent: 1
+
+content_19:
+  id: 19
+  title: Quiz
+  position: 222
+  s3_key: quiz_1_1.yaml
+  style: quiz
+  indent: 2
+
+content_20:
+  id: 20
+  title: 'Video: Optimizing CRC'
+  position: 230
+  s3_key: video_1_2.mp4
+  style: video
+  indent: 1
+
+content_21:
+  id: 21
+  title: Quiz
+  position: 232
+  s3_key: quiz_1_2.yaml
+  style: quiz
+  indent: 2
+
+content_22:
+  id: 22
+  title: 'Video: Optimizing Interactions'
+  position: 240
+  s3_key: video_1_3.mp4
+  style: video
+  indent: 1
+
+content_23:
+  id: 23
+  title: 'Video: Using webpagetest.org'
+  position: 250
+  s3_key: video_1_4.mp4
+  style: video
+  indent: 1
+
+content_24:
+  id: 24
+  title: 'Video: Benchmarking and Profiling'
+  position: 310
+  s3_key: video_2_0.mp4
+  style: video
+  indent: 1
+
+content_25:
+  id: 25
+  title: Quiz
+  position: 312
+  s3_key: quiz_2_0.yaml
+  style: quiz
+  indent: 2
+
+content_26:
+  id: 26
+  title: 'Video: Creating a Local Perf Environment'
+  position: 320
+  s3_key: video_2_1.mp4
+  style: video
+  indent: 1
+
+content_27:
+  id: 27
+  title: 'Video: Using Apache Bench'
+  position: 330
+  s3_key: video_2_2.mp4
+  style: video
+  indent: 1
+
+content_28:
+  id: 28
+  title: Quiz
+  position: 332
+  s3_key: quiz_2_2.yaml
+  style: quiz
+  indent: 2
+
+content_29:
+  id: 29
+  title: 'Video: Using benchmark-ips'
+  position: 340
+  s3_key: video_2_3.mp4
+  style: video
+  indent: 1
+
+content_30:
+  id: 30
+  title: Quiz
+  position: 342
+  s3_key: quiz_2_3.yaml
+  style: quiz
+  indent: 2
+
+content_31:
+  id: 31
+  title: 'Video: Benchmarking Background Jobs'
+  position: 350
+  s3_key: video_2_4.mp4
+  style: video
+  indent: 1
+
+content_32:
+  id: 32
+  title: Quiz
+  position: 352
+  s3_key: quiz_2_4.yaml
+  style: quiz
+  indent: 2
+
+content_33:
+  id: 33
+  title: 'Video: Benchmarking Rails'' Boot'
+  position: 360
+  s3_key: video_2_5.mp4
+  style: video
+  indent: 1
+
+content_34:
+  id: 34
+  title: 'Video: The DRM Method'
+  position: 410
+  s3_key: video_3_0.mp4
+  style: video
+  indent: 1
+
+content_35:
+  id: 35
+  title: Quiz
+  position: 412
+  s3_key: quiz_3_0.yaml
+  style: quiz
+  indent: 2
+
+content_36:
+  id: 36
+  title: 'Video: Profiling SQL'
+  position: 420
+  s3_key: video_3_1.mp4
+  style: video
+  indent: 1
+
+content_37:
+  id: 37
+  title: 'Video: Fixing N+1s'
+  position: 430
+  s3_key: video_3_2.mp4
+  style: video
+  indent: 1
+
+content_38:
+  id: 38
+  title: Quiz
+  position: 432
+  s3_key: quiz_3_2.yaml
+  style: quiz
+  indent: 2
+
+content_39:
+  id: 39
+  title: 'Video: Diagnose Unnecessary SQL'
+  position: 440
+  s3_key: video_3_3.mp4
+  style: video
+  indent: 1
+
+content_40:
+  id: 40
+  title: Quiz
+  position: 442
+  s3_key: quiz_3_3.yaml
+  style: quiz
+  indent: 2
+
+content_41:
+  id: 41
+  title: 'Video: Secret Rails AR Caches'
+  position: 450
+  s3_key: video_3_4.mp4
+  style: video
+  indent: 1
+
+content_42:
+  id: 42
+  title: Quiz
+  position: 452
+  s3_key: quiz_3_4.yaml
+  style: quiz
+  indent: 2
+
+content_43:
+  id: 43
+  title: 'Video: Fix Slow SQL with EXPLAIN'
+  position: 460
+  s3_key: video_3_5.mp4
+  style: video
+  indent: 1
+
+content_44:
+  id: 44
+  title: Quiz
+  position: 462
+  s3_key: quiz_3_5.yaml
+  style: quiz
+  indent: 2
+
+content_45:
+  id: 45
+  title: 'Video: How Profiling Works'
+  position: 510
+  s3_key: video_4_0.mp4
+  style: video
+  indent: 1
+
+content_46:
+  id: 46
+  title: Quiz
+  position: 512
+  s3_key: quiz_4_0.yaml
+  style: quiz
+  indent: 2
+
+content_47:
+  id: 47
+  title: 'Video: Using Stackprof'
+  position: 520
+  s3_key: video_4_1.mp4
+  style: video
+  indent: 1
+
+content_48:
+  id: 48
+  title: Quiz
+  position: 522
+  s3_key: quiz_4_1.yaml
+  style: quiz
+  indent: 2
+
+content_49:
+  id: 49
+  title: 'Video: Profiling Background Jobs'
+  position: 530
+  s3_key: video_4_2.mp4
+  style: video
+  indent: 1
+
+content_50:
+  id: 50
+  title: Quiz
+  position: 532
+  s3_key: quiz_4_2.yaml
+  style: quiz
+  indent: 2
+
+content_51:
+  id: 51
+  title: 'Video: Profiling Boot'
+  position: 540
+  s3_key: video_4_3.mp4
+  style: video
+  indent: 1
+
+content_52:
+  id: 52
+  title: Quiz
+  position: 542
+  s3_key: quiz_4_3.yaml
+  style: quiz
+  indent: 2
+
+content_53:
+  id: 53
+  title: 'Video: Profiling Memory'
+  position: 550
+  s3_key: video_4_4.mp4
+  style: video
+  indent: 1
+
+content_54:
+  id: 54
+  title: Quiz
+  position: 552
+  s3_key: quiz_4_4.yaml
+  style: quiz
+  indent: 2
+
+content_55:
+  id: 55
+  title: 'Video: Profiling Test Suites'
+  position: 560
+  s3_key: video_4_5.mp4
+  style: video
+  indent: 1
+
+content_56:
+  id: 56
+  title: Quiz
+  position: 562
+  s3_key: quiz_4_5.yaml
+  style: quiz
+  indent: 2
+
+content_57:
+  id: 57
+  title: 'Video: Perf Review Processes'
+  position: 570
+  s3_key: video_4_6.mp4
+  style: video
+  indent: 1
+
+content_58:
+  id: 58
+  title: 'Video: On Queueing Theory'
+  position: 610
+  s3_key: video_5_0.mp4
+  style: video
+  indent: 1
+
+content_59:
+  id: 59
+  title: Quiz
+  position: 612
+  s3_key: quiz_5_0.yaml
+  style: quiz
+  indent: 2
+
+content_60:
+  id: 60
+  title: 'Video: The USE Method, Part One'
+  position: 620
+  s3_key: video_5_1.mp4
+  style: video
+  indent: 1
+
+content_61:
+  id: 61
+  title: Quiz
+  position: 622
+  s3_key: quiz_5_1.yaml
+  style: quiz
+  indent: 2
+
+content_62:
+  id: 62
+  title: 'Video: The USE Method, Part Two'
+  position: 630
+  s3_key: video_5_2.mp4
+  style: video
+  indent: 1
+
+content_63:
+  id: 63
+  title: Quiz
+  position: 632
+  s3_key: quiz_5_2.yaml
+  style: quiz
+  indent: 2
+
+content_64:
+  id: 64
+  title: 'Video: Database Pools'
+  position: 640
+  s3_key: video_5_3.mp4
+  style: video
+  indent: 1
+
+content_65:
+  id: 65
+  title: Quiz
+  position: 642
+  s3_key: quiz_5_3.yaml
+  style: quiz
+  indent: 2
+
+content_66:
+  id: 66
+  title: 'Video: The GVL and Threads'
+  position: 650
+  s3_key: video_5_4.mp4
+  style: video
+  indent: 1
+
+content_67:
+  id: 67
+  title: Quiz
+  position: 652
+  s3_key: quiz_5_4.yaml
+  style: quiz
+  indent: 2
+
+content_68:
+  id: 68
+  title: 'Lab: Application Assessment'
+  position: 154
+  s3_key: lab_0_4.tar.gz
+  style: lab
+  indent: 2
+
+content_69:
+  id: 69
+  title: 'Lab: Critical Request Chain'
+  position: 214
+  s3_key: lab_1_0.tar.gz
+  style: lab
+  indent: 2
+
+content_70:
+  id: 70
+  title: 'Lab: Turbolinks'
+  position: 244
+  s3_key: lab_1_3.tar.gz
+  style: lab
+  indent: 2
+
+content_71:
+  id: 71
+  title: 'Lab: HTTP Benchmarking'
+  position: 334
+  s3_key: lab_2_2.tar.gz
+  style: lab
+  indent: 2
+
+content_72:
+  id: 72
+  title: 'Lab: benchmark-ips'
+  position: 344
+  s3_key: lab_2_3.tar.gz
+  style: lab
+  indent: 2
+
+content_73:
+  id: 73
+  title: 'Handout: Activerecord Troubleshooting'
+  position: 414
+  s3_key: lab_3_0.tar.gz
+  style: lab
+  indent: 2
+
+content_74:
+  id: 74
+  title: 'Lab: Fixing N+1s'
+  position: 434
+  s3_key: lab_3_2.tar.gz
+  style: lab
+  indent: 2
+
+content_75:
+  id: 75
+  title: 'Lab: Unnecessary SQL'
+  position: 444
+  s3_key: lab_3_3.tar.gz
+  style: lab
+  indent: 2
+
+content_76:
+  id: 76
+  title: 'Handout: Perf PR/Transaction Checklists'
+  position: 574
+  s3_key: lab_4_6.tar.gz
+  style: lab
+  indent: 2
+
+content_77:
+  id: 77
+  title: 'Lab: Scaling in Miniature'
+  position: 654
+  s3_key: lab_5_4.tar.gz
+  style: lab
+  indent: 2
+
+content_78:
+  id: 78
+  title: 'PR: Prod Perf Monitoring'
+  position: 136
+  s3_key: safari_0_2.md
+  style: text
+  indent: 2
+
+content_79:
+  id: 79
+  title: 'PR: Frontend Mistakes'
+  position: 236
+  s3_key: safari_1_2.md
+  style: text
+  indent: 2
+
+content_80:
+  id: 80
+  title: 'PR: Local Perf Environment'
+  position: 326
+  s3_key: safari_2_1.md
+  style: text
+  indent: 2
+
+content_81:
+  id: 81
+  title: 'PR: N+1s'
+  position: 436
+  s3_key: safari_3_2.md
+  style: text
+  indent: 2
+
+content_82:
+  id: 82
+  title: 'PR: Unnecessary SQL'
+  position: 446
+  s3_key: safari_3_3.md
+  style: text
+  indent: 2
+
+content_83:
+  id: 83
+  title: 'PR: QueryCache'
+  position: 456
+  s3_key: safari_3_4.md
+  style: text
+  indent: 2
+
+content_84:
+  id: 84
+  title: 'PR: Memory Allocation'
+  position: 556
+  s3_key: safari_4_4.md
+  style: text
+  indent: 2
+
+content_85:
+  id: 85
+  title: 'PR: Tests'
+  position: 566
+  s3_key: safari_4_5.md
+  style: text
+  indent: 2
+
+content_86:
+  id: 86
+  title: 'PR: Capstone Project'
+  position: 576
+  s3_key: safari_4_6.md
+  style: text
+  indent: 2
