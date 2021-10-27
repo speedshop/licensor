@@ -4,11 +4,12 @@ class GumroadWebhooksController < ApplicationController
   def create
     email = params["email"]
     product = params["product"]
+    key = params["key"]
 
     LicenseKey.create!(
       email: email.downcase,
       product: product,
-      key: LicenseKey.generate_key
+      key: key
     )
   end
 end
