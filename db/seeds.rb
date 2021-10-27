@@ -234,8 +234,16 @@ Content.create!(
 Content.create!(
   position: 5,
   title: "Sidekiq in Practice",
-  s3_key: "sip.tar.gz",
-  style: "sip",
+  s3_key: "compiled.tar.gz",
+  style: "compiled",
+  product: 1
+)
+
+Content.create!(
+  position: 6,
+  title: "Supporting Lab Files",
+  s3_key: "prof_gray.tar.gz",
+  style: "prof_gray",
   product: 1
 )
 
@@ -274,14 +282,6 @@ end
   )
 
   Content.create!(
-    position: i * 100 + 100 + 12,
-    title: "Quiz",
-    s3_key: "quiz_#{i}.yaml",
-    style: "quiz",
-    product: 1
-  )
-
-  Content.create!(
     position: i * 100 + 100 + 20,
     title: "Hands-on Lab",
     s3_key: "lab_#{i}.tar.gz",
@@ -290,3 +290,11 @@ end
     product: 1
   )
 end
+
+Content.create!(
+  position: 9001,
+  title: "Epilogue",
+  s3_key: "chapter_10.md",
+  style: "text",
+  product: 1
+)

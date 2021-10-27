@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post "stripe_webhooks", to: "stripe_webhooks#create"
   post "rpw-checkout" => "checkouts#create"
   post "rpw-contact" => "contacts#create"
+  post "gumroad-hook" => "gumroad_webhooks#create"
 end
