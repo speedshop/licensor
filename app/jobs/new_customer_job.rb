@@ -7,7 +7,7 @@ class NewCustomerJob < ActiveJob::Base
       expand: ["customer", "line_items"]
     )
     quantity = session.line_items.data.first.quantity
-    customer = session.customer.to_h
+    customer = session.customer_details.to_h
 
     license_keys = quantity.times.map {
       LicenseKey.create!(email: customer[:email].downcase, key: LicenseKey.generate_key)
