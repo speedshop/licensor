@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: bundle exec rails server -p 3000 -b '0.0.0.0'
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://postgres@db:5432/licensor_development
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  test:
+    build: .
+    command: bash -c "bundle exec rails db:test:prepare && bundle exec rails test"
+    environment:
+      RAILS_ENV: test
+      DATABASE_URL: postgres://postgres@db:5432/licensor_test
+      SECRET_KEY_BASE: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      # Mock AWS credentials for tests
+      AWS_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: testing
+      AWS_SECRET_ACCESS_KEY: testing
+      AWS_BUCKET: test-bucket
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
+  bundle_cache:

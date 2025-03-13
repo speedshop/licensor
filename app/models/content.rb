@@ -4,7 +4,7 @@ class Content < ApplicationRecord
     "rpw" => "speedshop-rpw"
   }
   PRESIGNER = Aws::S3::Presigner.new
-  enum product: [ :rpw, :sip ]
+  enum :product, [ :rpw, :sip ]
 
   def url
     return nil unless s3_key

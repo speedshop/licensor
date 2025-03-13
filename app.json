@@ -1,0 +1,95 @@
+{
+  "name": "licensor",
+  "description": "Rails application for license management",
+  "keywords": [
+    "dokku",
+    "rails",
+    "ruby"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rails db:migrate"
+    }
+  },
+  "addons": [
+    "dokku-postgres"
+  ],
+  "env": {
+    "RAILS_ENV": {
+      "description": "Rails environment",
+      "value": "production"
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "description": "Enables serving static files",
+      "value": "true"
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "description": "Send logs to stdout for Dokku logging",
+      "value": "true"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "A secret key for verifying the integrity of signed cookies",
+      "generator": "secret"
+    },
+    "ADMIN_API_KEY": {
+      "description": "API key for admin access",
+      "required": true
+    },
+    "STRIPE_API_KEY": {
+      "description": "Stripe API key",
+      "required": true
+    },
+    "STRIPE_WEBHOOK_SECRET": {
+      "description": "Secret for verifying Stripe webhook signatures",
+      "required": true
+    },
+    "ZAPIER_HOOK_URL": {
+      "description": "Webhook URL for Zapier integration",
+      "required": true
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "description": "AWS access key for S3",
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "description": "AWS secret key for S3",
+      "required": true
+    },
+    "AWS_REGION": {
+      "description": "AWS region for S3",
+      "required": true
+    },
+    "AWS_BUCKET": {
+      "description": "AWS S3 bucket name",
+      "required": true
+    },
+    "MAILGUN_API_KEY": {
+      "description": "Mailgun API key",
+      "required": true
+    },
+    "MAILGUN_PUBLIC_KEY": {
+      "description": "Mailgun public key for webhook verification",
+      "required": true
+    },
+    "MAILGUN_DOMAIN": {
+      "description": "Mailgun domain",
+      "required": true
+    },
+    "MAILGUN_SMTP_LOGIN": {
+      "description": "Mailgun SMTP login username",
+      "required": true
+    },
+    "MAILGUN_SMTP_PASSWORD": {
+      "description": "Mailgun SMTP password",
+      "required": true
+    },
+    "MAILGUN_SMTP_PORT": {
+      "description": "Mailgun SMTP port (usually 587)",
+      "value": "587"
+    },
+    "MAILGUN_SMTP_SERVER": {
+      "description": "Mailgun SMTP server hostname",
+      "value": "smtp.mailgun.org"
+    }
+  }
+}
