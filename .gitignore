@@ -25,3 +25,11 @@
 .env
 
 *.nix
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json

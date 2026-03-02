@@ -63,33 +63,37 @@
       "description": "AWS S3 bucket name",
       "required": true
     },
-    "MAILGUN_API_KEY": {
-      "description": "Mailgun API key",
+    "ACTION_MAILER_DELIVERY_METHOD": {
+      "description": "Action Mailer delivery method (smtp or mailgun)",
+      "value": "smtp"
+    },
+    "SMTP_ADDRESS": {
+      "description": "SMTP server hostname (AWS SES: email-smtp.<region>.amazonaws.com)",
       "required": true
     },
-    "MAILGUN_PUBLIC_KEY": {
-      "description": "Mailgun public key for webhook verification",
-      "required": true
-    },
-    "MAILGUN_DOMAIN": {
-      "description": "Mailgun domain",
-      "required": true
-    },
-    "MAILGUN_SMTP_LOGIN": {
-      "description": "Mailgun SMTP login username",
-      "required": true
-    },
-    "MAILGUN_SMTP_PASSWORD": {
-      "description": "Mailgun SMTP password",
-      "required": true
-    },
-    "MAILGUN_SMTP_PORT": {
-      "description": "Mailgun SMTP port (usually 587)",
+    "SMTP_PORT": {
+      "description": "SMTP server port",
       "value": "587"
     },
-    "MAILGUN_SMTP_SERVER": {
-      "description": "Mailgun SMTP server hostname",
-      "value": "smtp.mailgun.org"
+    "SMTP_USERNAME": {
+      "description": "SMTP username",
+      "required": true
+    },
+    "SMTP_PASSWORD": {
+      "description": "SMTP password",
+      "required": true
+    },
+    "SMTP_DOMAIN": {
+      "description": "SMTP HELO domain",
+      "required": true
+    },
+    "SMTP_AUTHENTICATION": {
+      "description": "SMTP authentication mode",
+      "value": "plain"
+    },
+    "SMTP_ENABLE_STARTTLS_AUTO": {
+      "description": "Enable STARTTLS",
+      "value": "true"
     }
   }
 }

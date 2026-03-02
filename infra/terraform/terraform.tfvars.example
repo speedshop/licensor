@@ -1,0 +1,9 @@
+cloudflare_api_token = "<cloudflare api token>"
+cloudflare_zone_id   = "<cloudflare zone id>"
+
+# Optional overrides
+# aws_region      = "us-east-1"
+# dokku_server_ip = "5.161.236.236"
+# app_subdomain   = "rpw-licensor"
+# base_domain     = "speedshop.co"
+# ses_domain      = "mg.speedshop.co"

@@ -33,10 +33,25 @@ module Licensor
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.action_mailer.delivery_method = :mailgun
-    config.action_mailer.mailgun_settings = {
-      api_key: ENV["MAILGUN_API_KEY"],
-      domain: "mg.speedshop.co"
-    }
+    config.action_mailer.delivery_method = ENV.fetch("ACTION_MAILER_DELIVERY_METHOD", "smtp").to_sym
+
+    if config.action_mailer.delivery_method == :mailgun
+      config.action_mailer.mailgun_settings = {
+        api_key: ENV["MAILGUN_API_KEY"],
+        domain: ENV.fetch("MAILGUN_DOMAIN", "mg.speedshop.co")
+      }
+    end
+
+    if config.action_mailer.delivery_method == :smtp
+      config.action_mailer.smtp_settings = {
+        address: ENV["SMTP_ADDRESS"] || ENV["MAILGUN_SMTP_SERVER"] || "localhost",
+        port: (ENV["SMTP_PORT"] || ENV["MAILGUN_SMTP_PORT"] || "587").to_i,
+        user_name: ENV["SMTP_USERNAME"] || ENV["MAILGUN_SMTP_LOGIN"],
+        password: ENV["SMTP_PASSWORD"] || ENV["MAILGUN_SMTP_PASSWORD"],
+        domain: ENV["SMTP_DOMAIN"] || ENV["MAILGUN_DOMAIN"] || "mg.speedshop.co",
+        authentication: ENV.fetch("SMTP_AUTHENTICATION", "plain").to_sym,
+        enable_starttls_auto: ENV.fetch("SMTP_ENABLE_STARTTLS_AUTO", "true") == "true"
+      }.compact
+    end
   end
 end
