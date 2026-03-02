@@ -3,7 +3,7 @@ require_relative "../config/environment"
 require "rails/test_help"
 
 Stripe.api_key = "sk_test_123"
-Stripe.api_base = "http://localhost:12111"
+Stripe.api_base = ENV.fetch("STRIPE_API_BASE", "http://localhost:12111")
 ENV["ADMIN_API_KEY"] = "admin"
 
 # Configure AWS SDK for testing

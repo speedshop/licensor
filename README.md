@@ -1,7 +1,12 @@
 This is `licensor`, the license server for the Rails Performance Workshop.
 
-Testing requires `stripe-mock` to be running on port 12111:
+## Running tests with Docker Compose
 
+```bash
+docker compose -f docker-compose.test.yml run --rm --build test
 ```
-docker run --rm -it -p 12111-12112:12111-12112 stripemock/stripe-mock:test
-```
+
+This starts:
+- Postgres for the test database
+- `stripe-mock` for Stripe API calls used by tests
+- the Rails test runner container

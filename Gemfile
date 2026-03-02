@@ -20,3 +20,4 @@ group :development do
 end
 
 gem "dotenv-rails", groups: [:development, :test]
+gem "minitest", "< 6", groups: [:test]

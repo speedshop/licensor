@@ -105,7 +105,7 @@ GEM
     dotenv-rails (3.1.7)
       dotenv (= 3.1.7)
       railties (>= 6.1)
-    drb (2.2.1)
+    drb (2.2.3)
     erubi (1.13.1)
     ethon (0.16.0)
       ffi (>= 1.15.0)
@@ -157,9 +157,7 @@ GEM
     mime-types-data (3.2025.0304)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (6.0.2)
-      drb (~> 2.0)
-      prism (~> 1.5)
+    minitest (5.27.0)
     msgpack (1.8.0)
     net-http (0.6.0)
       uri
@@ -200,7 +198,6 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.9.0)
     psych (5.2.3)
       date
       stringio
@@ -285,7 +282,7 @@ GEM
     standard-performance (1.7.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.24.0)
-    stringio (3.1.5)
+    stringio (3.2.0)
     stripe (13.5.0)
     thor (1.3.2)
     timeout (0.4.3)
@@ -321,6 +318,7 @@ DEPENDENCIES
   dotenv-rails
   mailgun-ruby
   memory_profiler
+  minitest (< 6)
   pg (>= 0.18, < 2.0)
   puma
   rack-mini-profiler

@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: licensor_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d licensor_test"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  stripe-mock:
+    image: stripemock/stripe-mock:latest
+
+  test:
+    build: .
+    command: sh -lc "bundle exec rails db:prepare && bundle exec rails test"
+    environment:
+      RAILS_ENV: test
+      DATABASE_URL: postgres://postgres:postgres@db:5432/licensor_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      SECRET_KEY_BASE: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      STRIPE_API_KEY: sk_test_123
+      STRIPE_WEBHOOK_SECRET: whsec_test
+      STRIPE_API_BASE: http://stripe-mock:12111
+      ADMIN_API_KEY: admin
+      ZAPIER_HOOK_URL: http://example.test/zapier
+      AWS_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: testing
+      AWS_SECRET_ACCESS_KEY: testing
+      AWS_BUCKET: test-bucket
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+      stripe-mock:
+        condition: service_started
