@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.4.2"
+ruby "4.0.1"
 
 gem "rails"
 gem "pg", ">= 0.18", "< 2.0"
@@ -10,6 +10,7 @@ gem "aws-sdk-s3"
 gem "stripe"
 gem "mailgun-ruby"
 gem "typhoeus"
+gem "cgi"
 
 group :development do
   gem "standard"

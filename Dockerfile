@@ -1,4 +1,4 @@
-FROM ruby:3.4.2-slim
+FROM ruby:4.0.1-slim
 
 # Install essential Linux packages
 RUN apt-get update -qq && apt-get install -y \
@@ -8,7 +8,10 @@ RUN apt-get update -qq && apt-get install -y \
     git \
     curl \
     libyaml-dev \
+    libjemalloc2 \
     && rm -rf /var/lib/apt/lists/*
+
+ENV LD_PRELOAD=libjemalloc.so.2
 
 # Set working directory
 WORKDIR /app
